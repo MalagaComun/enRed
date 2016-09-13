@@ -348,7 +348,7 @@ public class ConversationActivity extends XmppActivity
 			} else {
 				ab.setDisplayHomeAsUpEnabled(false);
 				ab.setHomeButtonEnabled(false);
-				ab.setTitle(R.string.app_name);
+				ab.setTitle(R.string.conversation_activity_title);
 			}
 		}
 	}

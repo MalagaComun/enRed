@@ -8,9 +8,9 @@ public final class Config {
 
 
 	private static final int UNENCRYPTED = 1;
-	private static final int OPENPGP = 2;
-	private static final int OTR = 4;
-	private static final int OMEMO = 8;
+	private static final int OPENPGP = 0;	// quitamos el soporte a los encriptadores (antes 2, 4 y 8)
+	private static final int OTR = 0;
+	private static final int OMEMO = 0;
 
 	private static final int ENCRYPTION_MASK = UNENCRYPTED | OPENPGP | OTR | OMEMO;
 

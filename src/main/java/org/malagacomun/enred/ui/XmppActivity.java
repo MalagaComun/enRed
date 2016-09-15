@@ -421,7 +421,8 @@ public abstract class XmppActivity extends Activity {
 	}
 
 	public boolean isDarkTheme() {
-		return getPreferences().getString("theme", "light").equals("dark");
+	//	return getPreferences().getString("theme", "light").equals("dark");
+		return true;   //Forzamos el tema oscuro
 	}
 
 	public int getThemeResource(int r_attr_name, int r_drawable_def) {
@@ -1178,20 +1179,20 @@ public abstract class XmppActivity extends Activity {
 	}
 
 	protected int findTheme() {
-		Boolean dark   = getPreferences().getString("theme", "light").equals("dark");
+		//Boolean dark   = getPreferences().getString("theme", "light").equals("dark");
 		Boolean larger = getPreferences().getBoolean("use_larger_font", false);
 
-		if(dark) {
+		//if(dark) {   Forzamos el tema oscuro
 			if(larger)
 				return R.style.ConversationsTheme_Dark_LargerText;
 			else
 				return R.style.ConversationsTheme_Dark;
-		} else {
+		/*} else {
 			if (larger)
 				return R.style.ConversationsTheme_LargerText;
 			else
 				return R.style.ConversationsTheme;
-		}
+		}*/
 	}
 
 	@Override
